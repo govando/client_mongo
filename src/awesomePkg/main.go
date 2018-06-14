@@ -17,10 +17,11 @@ import (
 func main() {
 
 	//var c
-    client()
+//    client()
     create_db()
 
-
+	bulkOp()
+    
 	var host = "127.0.0.1:27017"
 
 	mgoSession, _ := mgo.Dial(host)

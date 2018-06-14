@@ -11,11 +11,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/awesomePkg/main.go">
+      <file leaf-file-name="main.go" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../awesomeBenchmark/src/awesomePkg/main.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
+            <state relative-caret-position="255">
+              <caret line="23" column="4" lean-forward="true" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
               <folding>
                 <element signature="e#14#146#0" expanded="true" />
               </folding>
@@ -23,14 +23,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="client.go" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/awesomePkg/client.go">
+      <file leaf-file-name="client.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../awesomeBenchmark/src/awesomePkg/client.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" selection-start-line="10" selection-end-line="10" />
+            <state relative-caret-position="195">
+              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
               <folding>
                 <element signature="e#16#85#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bulkOp.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../awesomeBenchmark/src/awesomePkg/bulkOp.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="11" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -65,6 +74,8 @@
         <option value="$PROJECT_DIR$/src/awesomePkg/Client.go" />
         <option value="$PROJECT_DIR$/src/awesomePkg/main.go" />
         <option value="$PROJECT_DIR$/src/awesomePkg/client.go" />
+        <option value="$PROJECT_DIR$/../awesomeBenchmark/src/awesomePkg/bulkOp.go" />
+        <option value="$PROJECT_DIR$/../awesomeBenchmark/src/awesomePkg/main.go" />
       </list>
     </option>
   </component>
@@ -93,17 +104,17 @@
         <subPane>
           <expand>
             <path>
-              <item name="awesomeProject2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="awesomeProject2" type="462c0819:PsiDirectoryNode" />
+              <item name="awesomeBenchmark" type="b2602c69:ProjectViewProjectNode" />
+              <item name="awesomeBenchmark" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="awesomeProject2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="awesomeProject2" type="462c0819:PsiDirectoryNode" />
+              <item name="awesomeBenchmark" type="b2602c69:ProjectViewProjectNode" />
+              <item name="awesomeBenchmark" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="awesomeProject2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="awesomeProject2" type="462c0819:PsiDirectoryNode" />
+              <item name="awesomeBenchmark" type="b2602c69:ProjectViewProjectNode" />
+              <item name="awesomeBenchmark" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="awesomePkg" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -171,8 +182,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.122371964" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18652292" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Database" order="3" />
@@ -204,7 +216,7 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/awesomePkg/main.go">
+    <entry file="file://$PROJECT_DIR$/../awesomeBenchmark/src/awesomePkg/main.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="855">
           <caret line="66" column="33" selection-start-line="66" selection-start-column="33" selection-end-line="66" selection-end-column="33" />
@@ -214,7 +226,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/awesomePkg/client.go">
+    <entry file="file://$PROJECT_DIR$/../awesomeBenchmark/src/awesomePkg/client.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="22" column="32" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="32" />
@@ -225,22 +237,29 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.go" />
-    <entry file="file://$PROJECT_DIR$/src/awesomePkg/main.go">
+    <entry file="file://$PROJECT_DIR$/../awesomeBenchmark/src/awesomePkg/client.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
+        <state relative-caret-position="195">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
           <folding>
-            <element signature="e#14#146#0" expanded="true" />
+            <element signature="e#16#85#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/awesomePkg/client.go">
+    <entry file="file://$PROJECT_DIR$/../awesomeBenchmark/src/awesomePkg/bulkOp.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        <state relative-caret-position="60">
+          <caret line="4" column="11" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../awesomeBenchmark/src/awesomePkg/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="23" column="4" lean-forward="true" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
           <folding>
-            <element signature="e#16#85#0" expanded="true" />
+            <element signature="e#14#146#0" expanded="true" />
           </folding>
         </state>
       </provider>
