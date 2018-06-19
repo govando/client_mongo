@@ -26,8 +26,16 @@ func testComm_emptyCount()  {
 		commTest_emptyCount(size,f)
 	}
 
-
-
 }
 
+func testComm_bulkFind()  {
 
+	f, err := os.Create("./data/commEmptyCount/data")
+	check(err)
+	defer f.Close()
+
+	for _, size := range tamannos {
+		commTest_emptyBulkFind(size,f)
+	}
+
+}

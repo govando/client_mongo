@@ -3,6 +3,7 @@ package main
 import (
 	"gopkg.in/mgo.v2"
 	"fmt"
+	"time"
 )
 
 func create_db()  {
@@ -45,9 +46,6 @@ func create_db()  {
 		}
 	}
 
-	/*conn.C(coll).Insert(&Doc{Data: "wea Insertada!",cmp1:21})
-	conn.C(coll).Insert(&Person{Data: "Ale", Phone: "+55 53 1234 4321", Timestamp: time.Now()},
-		&Person{Data: "Cla", Phone: "+66 33 1234 5678", Timestamp: time.Now()})
-	*/
+	time.Sleep(1000)
 
 }

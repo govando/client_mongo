@@ -11,7 +11,7 @@ var (
 )
 
 var (
-	tamannos	= []uint32{100, 400, 700, 1000} //bytes
+	tamannos	= []uint32{64, 100, 400, 700, 1000} //bytes
 	n_pruebas	= 30
 )
 

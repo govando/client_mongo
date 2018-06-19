@@ -18,16 +18,133 @@ var (
 	total_time	int64
 )
 
-func bulkOp(){
-	fmt.Println("bulkOp")
+
+func commTest_emptyBulkFind(size uint32, f *os.File) {
+
+	mgoSession, _ := mgo.Dial(host)
+	defer mgoSession.Close()
+	var contentArray []interface{}
+	var doc Doc
+
+	bulk := mgoSession.DB(db).C(coll).Bulk()
+
+
+
+	data := strings.Repeat("a", (int)(sizeData))
+
+	for j := uint32(0); j < tipo_operacion[i]; j++ {
+		create_document(j)
+
+	}
+
+
+
+
+
+
+	count = 0
+	bulk := mgoSession.DB(data_base_).C(col).Bulk()
+
+
+
+	var contentArray []interface{}
+	for j := uint32(0); j < tipo_operacion[i]; j++ {
+
+		var doc Document
+		doc.Id = j
+		doc.Cmp1 = j
+		doc.Cmp2 = j
+		doc.Cmp3 = j
+		doc.Data = data
+
+
+		contentArray =  append(contentArray, &doc)
+		count++
+
+
+		//fmt.Println("count: ",count," contentarray:",contentArray," j: ",j)
+		if  count==1000 || j==tipo_operacion[i]-1  || (uint32)(16000000)<(count+1)*tamannos[i] {
+			fmt.Println("IN: len: ", len(contentArray),
+				" tipo_operacion: ",tipo_operacion[i]," count:",count, " j: ",j)
+			//mgoSession.DB(data_base_).C(col).Insert(&doc)
+			bulk.Insert(contentArray...)
+			_, err := bulk.Run()
+			if err != nil {
+				fmt.Println("ERROR! y: contentArray: ",contentArray," len: ", len(contentArray))
+				panic(err)
+			}
+
+
+			count=0
+			//fmt.Println(time.Now(), " col:", col, "( i :", i, "-", nbr_tamannnos, ") (j:", j, "-", tipo_operacion[i], ")")
+			bulk = mgoSession.DB(data_base_).C(col).Bulk()
+			contentArray = nil
+			fmt.Println("END: len: ", len(contentArray),
+				" tipo_operacion: ",tipo_operacion[i]," count:",count, " j: ",j)
+		}
+
+	}
+
+
+
+
+
+
+	tini := time.Now()
+	var col string
+	for i := 0; i < nbr_tamannnos; i++ {
+
+		col = "BYTES_" + fmt.Sprint(tamannos[i]) + ".DAT"
+		sizeData := tamannos[i] - bytesReserved
+		data := strings.Repeat("a", (int)(sizeData))
+
+		count=0
+		bulk := mgoSession.DB(data_base_).C(col).Bulk()
+		var contentArray []interface{}
+		for j := uint32(0); j < tipo_operacion[i]; j++ {
+
+			var doc Document
+			doc.Id = j
+			doc.Cmp1 = j
+			doc.Cmp2 = j
+			doc.Cmp3 = j
+			doc.Data = data
+
+
+			contentArray =  append(contentArray, &doc)
+			count++
+
+
+			//fmt.Println("count: ",count," contentarray:",contentArray," j: ",j)
+			if  count==1000 || j==tipo_operacion[i]-1  || (uint32)(16000000)<(count+1)*tamannos[i] {
+				fmt.Println("IN: len: ", len(contentArray),
+					" tipo_operacion: ",tipo_operacion[i]," count:",count, " j: ",j)
+				//mgoSession.DB(data_base_).C(col).Insert(&doc)
+				bulk.Insert(contentArray...)
+				_, err := bulk.Run()
+				if err != nil {
+					fmt.Println("ERROR! y: contentArray: ",contentArray," len: ", len(contentArray))
+					panic(err)
+				}
+
+
+				count=0
+				//fmt.Println(time.Now(), " col:", col, "( i :", i, "-", nbr_tamannnos, ") (j:", j, "-", tipo_operacion[i], ")")
+				bulk = mgoSession.DB(data_base_).C(col).Bulk()
+				contentArray = nil
+				fmt.Println("END: len: ", len(contentArray),
+					" tipo_operacion: ",tipo_operacion[i]," count:",count, " j: ",j)
+			}
+
+		}
+	}
 }
 
 
+
+//'n' pruebas de comunicacion para cada tamaño
 func commTest_emptyCount(size uint32, f *os.File)  {
 
-	//f, err := os.OpenFile("./data/commEmptyCount/data", os.O_RDWR|os.O_APPEND, 0660);
-	//check(err)
-	//defer f.Close()
 
 	var buffer bytes.Buffer
 	var times[] float64
